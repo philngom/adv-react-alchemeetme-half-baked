@@ -1,3 +1,12 @@
+import {
+  render,
+  screen,
+  waitFor,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import userEvent from '@testing-library/user-event';
+import Home from './Home';
 
 const user = {
   id: 1,
@@ -11,5 +20,12 @@ const user = {
 }
 
 test('Should render the user profile', () => {
+  // render(
+  //   <MemoryRouter >
+  //     <Home />
+  //   </MemoryRouter>
+  // )
+
+
 
 })

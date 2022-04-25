@@ -10,10 +10,15 @@ import App from './App';
 
 test('Should render the header', async () => {
   render(
-    <App />
-  )
+      <MemoryRouter >
+        <App />
+      </MemoryRouter>
+    )
 
-  return waitFor(() => {
-    screen.findByText('Meet Vonta');
-  })
+    const header = screen.getByRole('banner');
+    const logo = await screen.findByAltText('Alchemy Logo');
+    const profileName = await screen.findByText(/vonta/i);
+    expect(logo).toBeInTheDocument();
+    expect(profileName).toBeInTheDocument();
+    expect(header).toBeInTheDocument();
 });
