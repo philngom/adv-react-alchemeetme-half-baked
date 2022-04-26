@@ -10,9 +10,7 @@ import App from './App';
 
 test('Should render the header', async () => {
   render(
-      <MemoryRouter >
         <App />
-      </MemoryRouter>
     )
 
     const header = screen.getByRole('banner');
